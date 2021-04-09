@@ -10,13 +10,13 @@ import smtplib
 msg = MIMEMultipart()
 
 
-message = "Thank you"
+message = "Build realizado"
 
 # setup the parameters of the message
-password = "df59pu32"
+password = ""
 msg['From'] = "apalacif@educacion.navarra.es"
 msg['To'] = "apalacif@gmail.com"
-msg['Subject'] = "Subscription"
+msg['Subject'] = "Build blog"
 
 # add in the message body
 msg.attach(MIMEText(message, 'plain'))
@@ -26,8 +26,8 @@ server = smtplib.SMTP('176.12.82.3: 25')
 
 #server.starttls()
 
-# Login Credentials for sending the mail
-server.login(msg['From'], password)
+# Login Credentials for sending the mail (no es necesario)
+#server.login(msg['From'], password)
 
 
 # send the message via the server.
